@@ -1,0 +1,79 @@
+
+td {
+  padding: 30px;
+  color: rgb(255, 251, 0);
+  background-color: rgb(163, 10, 10);
+}
+ .head{ 
+   text-align: center;
+   margin: auto;
+   margin-top: 50px;
+  font-size: 50px;
+  color:  rgb(255, 255, 255);
+  font-weight: 900;
+  font-family: cursive;
+  background-color: transparent;
+}
+.headl{ 
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+ font-size: 50px;
+ color: rgb(2, 61, 18);
+ font-weight: 900;
+ font-family: cursive;
+ background-color: transparent;
+ margin-bottom: 50px;
+}
+.table{
+          margin-top: 50px;
+          font-family: cursive;
+          font-weight: 900;
+          background-color: transparent;
+}
+.tablel td{
+  margin-top: 50px;
+  font-family: cursive;
+  font-weight: 900;
+  background-color: rgb(255, 255, 0);
+  color: rgb(246, 119, 0);
+
+}
+.submit input{
+     
+     font-family: cursive;
+     background-color: rgb(28, 167, 0);
+     border:none;
+     border-radius: 5px;
+     color: rgb(251, 255, 10);
+     padding:5px 15px ;
+     margin-inline: 30px ;
+}
+.login{
+  
+  background-color: rgb(238, 0, 0);
+  border:none;
+  border-radius: 5px;
+  color: rgb(251, 255, 3);
+  font-family: cursive;
+  padding:5px 15px ;
+}
+.lbody{
+        background-image: url("https://www.thespruceeats.com/thmb/sLkcu8KzpoUr1u1sqXOLGjDPTx0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/309291-001-56a510423df78cf772862aea.jpg");
+        background-repeat:no-repeat;
+    background-size: cover;
+
+}
+.rbody{
+   background-image: url("https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,q_60,w_750,f_auto/37-thali-canva-phpAAsz1i");
+   background-repeat: no-repeat;
+     background-size: cover;
+    background-position: center;
+}
+   textarea{
+     resize: none;
+   }
+   
+     
+     
+
