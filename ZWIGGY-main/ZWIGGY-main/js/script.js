@@ -2,17 +2,15 @@
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('.add-to-cart-btn').forEach(function(btn) {
       btn.addEventListener('click', function() {
-          // Get item name and price from the parent .apet-left
           const parent = btn.parentElement;
           const item = parent.querySelector('p').innerText;
           const price = parent.querySelectorAll('p')[1].innerText;
           alert(`${item} (${price}) added to cart!`);
-          // Here you can add logic to update cart in localStorage or send to backend
       });
   });
 });
 
-// --- Cart Logic ---
+// Cart Logic 
 function getCart() {
   return JSON.parse(localStorage.getItem(CART_KEY)) || [];
 }
@@ -69,7 +67,7 @@ function updateCartUI() {
   });
 }
 
-// Dropdown show/hide (hover for desktop, click for mobile)
+// Dropdown show/hide 
 const cartWrapper = document.getElementById('cartDropdownWrapper');
 const cartDropdown = document.getElementById('cartDropdown');
 const closeCartDropdown = document.getElementById('closeCartDropdown');
@@ -83,10 +81,8 @@ function hideCartDropdown() {
 }
 
 if (cartWrapper && cartDropdown) {
-  // Desktop: hover
   cartWrapper.addEventListener('mouseenter', showCartDropdown);
   cartWrapper.addEventListener('mouseleave', hideCartDropdown);
-  // Mobile: click to open/close
   cartWrapper.addEventListener('click', function(e) {
     if(window.innerWidth < 700) {
       cartDropdown.style.display = cartDropdown.style.display === 'block' ? 'none' : 'block';
@@ -99,27 +95,22 @@ if (closeCartDropdown) {
   closeCartDropdown.onclick = hideCartDropdown;
 }
 
-// Add to cart buttons (for both Bootstrap cards and custom .apet)
-// In your add-to-cart event listener:
+
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
     btn.addEventListener('click', function() {
       const card = btn.closest('.card, .apet');
       let name, price;
       
-      // For Bootstrap cards
       if (card.querySelector('.card-title')) {
         name = card.querySelector('.card-title').innerText;
         const priceText = card.querySelector('.card-text').innerText;
-        // Extract FIRST NUMBER from price text
-        price = parseInt(priceText.match(/\d+/)[0]); // ← FIX IS HERE
+        price = parseInt(priceText.match(/\d+/)[0]); 
       } 
-      // For custom .apet layout
       else {
         name = card.querySelector('p').innerText;
         const priceText = card.querySelectorAll('p')[1].innerText;
-        // Extract FIRST NUMBER from price text
-        price = parseInt(priceText.match(/\d+/)[0]); // ← AND HERE
+        price = parseInt(priceText.match(/\d+/)[0]); 
       }
       
       addToCart({name, price});
@@ -128,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
   updateCartUI();
 });
 
-// Cart Rendering & Payment Logic ---
 const CART_KEY = 'food_cart_items';
 
 function getCart() {
